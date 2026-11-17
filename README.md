@@ -182,7 +182,7 @@ code_intelligence_platform/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/ahmadullah-programmer-researcher/code_intelligence_platform.git
 ```
 
 Replace the placeholder with your actual GitHub repository URL.
