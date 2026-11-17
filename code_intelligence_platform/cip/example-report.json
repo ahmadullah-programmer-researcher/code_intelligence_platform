@@ -1,0 +1,112 @@
+{
+  "project": "sample_project",
+  "root": "/mnt/data/cip/examples/sample_project",
+  "files_scanned": 2,
+  "cache_hits": 0,
+  "metrics": {
+    "lines": 15,
+    "functions": 4,
+    "classes": 0
+  },
+  "finding_count": 4,
+  "findings": [
+    {
+      "rule_id": "CIP003",
+      "severity": "medium",
+      "message": "Hard-coded credential-like value detected.",
+      "path": "app.py",
+      "line": 4,
+      "column": 0
+    },
+    {
+      "rule_id": "CIP002",
+      "severity": "high",
+      "message": "Subprocess invoked with shell=True can enable command injection.",
+      "path": "app.py",
+      "line": 7,
+      "column": 11
+    },
+    {
+      "rule_id": "CIP004",
+      "severity": "high",
+      "message": "Pickle deserialization can execute attacker-controlled payloads.",
+      "path": "app.py",
+      "line": 10,
+      "column": 11
+    },
+    {
+      "rule_id": "CIP001",
+      "severity": "high",
+      "message": "Use of eval/exec can execute untrusted code.",
+      "path": "unsafe.py",
+      "line": 2,
+      "column": 11
+    }
+  ],
+  "files": [
+    {
+      "path": "app.py",
+      "language": "python",
+      "sha256": "e84d5b4d3dc42617eedebbcb4e3255b01fd0b185c3ca5525197c3acadd5436fa",
+      "lines": 13,
+      "functions": 3,
+      "classes": 0,
+      "findings": [
+        {
+          "rule_id": "CIP003",
+          "severity": "medium",
+          "message": "Hard-coded credential-like value detected.",
+          "path": "app.py",
+          "line": 4,
+          "column": 0
+        },
+        {
+          "rule_id": "CIP002",
+          "severity": "high",
+          "message": "Subprocess invoked with shell=True can enable command injection.",
+          "path": "app.py",
+          "line": 7,
+          "column": 11
+        },
+        {
+          "rule_id": "CIP004",
+          "severity": "high",
+          "message": "Pickle deserialization can execute attacker-controlled payloads.",
+          "path": "app.py",
+          "line": 10,
+          "column": 11
+        }
+      ],
+      "imports": [
+        "pickle",
+        "subprocess"
+      ],
+      "parse_error": null
+    },
+    {
+      "path": "unsafe.py",
+      "language": "python",
+      "sha256": "235405d418b6a9c31c05ad8f0884bd51a016d818c11bf69c9c505ab9ef3f1a01",
+      "lines": 2,
+      "functions": 1,
+      "classes": 0,
+      "findings": [
+        {
+          "rule_id": "CIP001",
+          "severity": "high",
+          "message": "Use of eval/exec can execute untrusted code.",
+          "path": "unsafe.py",
+          "line": 2,
+          "column": 11
+        }
+      ],
+      "imports": [],
+      "parse_error": null
+    }
+  ],
+  "dependency_graph": {
+    "app": [],
+    "unsafe": []
+  },
+  "dependency_cycles": []
+}
